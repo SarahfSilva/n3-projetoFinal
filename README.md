@@ -23,7 +23,7 @@ https://robomongo.org/download
 Instale o nodemon: <p>
 <b>npm install -g nodemon</b> <p>
 
-instale o express: <p>
+Instale o express: <p>
 <b>npm install express</b><p>
 
 Instale o mongoose: <p>
