@@ -4,9 +4,9 @@ const router = express.Router();
 const controller = require("../controller/livrosControllers")
  
 
-router.get("/catalogo", controller.exibirTodos)
-router.post ("/criar", controller.criarLivro)
-router.patch("/exibicao/:id", controller.atualizarLivro)
-router.delete("/remover/:id", controller.deletarLivro)
+router.get("/", controller.exibirTodos)
+router.post ("/inserir", controller.criarLivro)
+router.patch("/atualizar/:id", controller.atualizarLivro)
+router.delete("/deletar/:id", controller.deletarLivro)
 
 module.exports = router

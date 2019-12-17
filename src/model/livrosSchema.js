@@ -12,15 +12,14 @@ const livrosSchema = new Schema({
             required: true
             },
         autor: {
-            type: Number,
+            type: String,
             required: true
         },        
         resenha: {
             type: String,
         },
         lido: {
-            type: Boolean,
-            required: true
+            type: Boolean
         }
 
 

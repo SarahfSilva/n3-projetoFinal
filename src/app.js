@@ -1,7 +1,7 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const index = require("./routes/index")
-const filmes = require("./routes/filmesRouter")
+const livros = require("./routes/livrosRouter")
 
 const dataBase = require("./model/database")
 dataBase.connect()
@@ -20,6 +20,6 @@ app.use(function (request, response, next) {
 app.use(bodyParser.json())
 
 app.use("/", index)
-app.use('/livros', filmes)
+app.use('/livros', livros)
 
 module.exports = app

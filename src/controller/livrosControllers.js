@@ -14,7 +14,9 @@ const exibirTodos = (request, response) => {
 const criarLivro = (request, response) => {
     const livroNome = request.body.nome;
     const livroAutor = request.body.autor;
-    const livro = new livrosCollection({nome: livroNome, autor: livroAutor})
+    const livroResenha = request.body.resenha;
+    const livroLido = request.body.lido
+    const livro = new livrosCollection({nome: livroNome, autor: livroAutor, resenha: livroResenha, lido: livroLido})
     livro.save((error) => {
         if(error){
             return response.status(400).send(error)
@@ -56,7 +58,6 @@ const deletarLivro = (request, response) =>{
         }
     })
 }
-
 
 module.exports = {
     exibirTodos,
